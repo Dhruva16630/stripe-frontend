@@ -1,5 +1,13 @@
-import { leftArrowPath, rightArrowPath } from "../svgPath/iconsPaths";
-import { Dropdown } from "../ui/dropdown";
+import { leftArrowPath, rightArrowPath } from "../svgPath/iconsPaths"
+
+export const navItems = [
+  {label: "Products", hasArrow: true, dropdown: true },
+  {label: "Soltions", hasArrow: true, dropdown: true},
+  {label: "Developers", hasArrow: true, dropdown: true},
+  {label: "Resources", hasArrow: true, dropdown: true},
+  {label: "Pricing", hasArrow: false, dropdown: false},
+]
+
 
 interface NavItemProps {
   label: string;
@@ -7,19 +15,9 @@ interface NavItemProps {
   dropdown?: boolean
 }
 
-
-export const navItems = [
-  { label: "Products", hasArrow: true, dropdown: true },
-  { label: "Solutions", hasArrow:true , dropdown: true },
-  { label: "Developers", hasArrow:true , dropdown: true },
-  { label: "Resources", hasArrow:true , dropdown: true },
-  { label: "Pricing" },
-];
-
-
 export const NavItem = ({ label, hasArrow, dropdown }: NavItemProps) => {
   return (
-    <li className="relative group flex items-center gap-1 cursor-pointer">
+    <li className="group flex items-center gap-1 cursor-pointer whitespace-nowrap">
       <span>{label}</span>
 
       {hasArrow && (
@@ -27,14 +25,18 @@ export const NavItem = ({ label, hasArrow, dropdown }: NavItemProps) => {
           width="14"
           height="14"
           viewBox="0 0 16 16"
-          className="transition-transform duration-300 group-hover:rotate-180"
+          className="
+            transition-transform duration-940 ease-out
+            group-hover:rotate-x-180 block translate-y-px
+          "
         >
           {leftArrowPath}
           {rightArrowPath}
         </svg>
       )}
-
-      {dropdown && <Dropdown />}
     </li>
   );
-}
+};
+
+
+
