@@ -1,6 +1,5 @@
+import Image from "next/image"
 import { ProductsDropdown, productsDropdownMoneyManagement, productsDropdownMore, productsDropdownPayments, productsDropdownPlatformsandmarketplaces, productsDropdownRevenue } from "./dropdownItems"
-
-
 
 export const Dropdown = () => {
     return (
@@ -64,6 +63,14 @@ export const Dropdown = () => {
                         />
                     ))}
                 </div>
+                <div className="mt-9 px6">
+                    <Image src="/images/image.png"
+                        alt="NavbarImage" width={300} height={200} className="object-contain" />
+                </div>
+                <p>
+                    <b className="flex">Join us at Sessions</b>
+                    Register to attend our<br /> annual conference in San Francisco April 29–30.
+                </p>
             </section>
         </div>
     )

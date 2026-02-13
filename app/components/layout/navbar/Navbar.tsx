@@ -1,5 +1,4 @@
 import { logoPath } from "../svgPath/iconsPaths";
-import { Dropdown } from "./navbarDropdowns";
 import { NavItem, navItems } from "./navItems";
 
 export const Navbar = () => {
@@ -21,7 +20,6 @@ export const Navbar = () => {
           ))}
         </ul>
       </nav>
-      {/* <Dropdown /> */}
     </>
 
   )
